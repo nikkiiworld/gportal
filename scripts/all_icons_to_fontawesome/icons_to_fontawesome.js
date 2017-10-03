@@ -1,5 +1,8 @@
 (function(){
     $(document).ready(function(){
+        
+        $('head').append('<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" tpye="text/css">');
+        
         var changeIcons = function (){
             var title = $('img[src="image/note10.png"]').attr('title');
             $('img[src="image/note10.png"]').replaceWith( '<i class="fa fa-file-text-o" title="'+title+'" aria-hidden="true"></i>' );
