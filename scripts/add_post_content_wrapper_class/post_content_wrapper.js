@@ -2,12 +2,11 @@
     $(document).ready(function(){
         var posts = $('div[id^="post_"]');
         posts.each(function(){
-            console.log($(this).children('div:not([attr_all])'));
-            /*var div = $(this).children('div:not([attr_all])').find(function(div){
-              return $(div).attr('style') === null && $(div).attr('class') === null;
+            $(this).children('div:not([attr_all])').each(function(){
+				if( $(this).attr('style') === undefined && $(this).attr('class') === undefined ){
+					$(this).addClass('post-content');
+				}
             });
-            console.log(div);
-            $(div).addClass("post-content");*/
         });
     });
 })(jQuery)
