@@ -14,7 +14,7 @@ function roviditettBejegyzesek (max = 250, readMoreText = "[..]", firstPost = fa
                     }else{
                        var readmore = '<span class="readmore">'+readMoreText+'</span>';
                     }
-                    $(this).html('<p>'+$('.post-content').text().substring(0,max) + readmore + '</p>');
+                    $(this).html('<p>'+$('this').text().substring(0,max) + readmore + '</p>');
                }
 
            });
@@ -30,7 +30,14 @@ function roviditettBejegyzesek (max = 250, readMoreText = "[..]", firstPost = fa
                     }else{
                        var readmore = '<span class="readmore">'+readMoreText+'</span>';
                     }
-                    $(this).html('<p>'+$('div:not([attr_all])').text().substring(0,max) + readmore + '</p>');
+                    var content = "";
+                    $(this).children('div:not([attr_all])').each(function(){
+                        if( $(this).attr('style') === undefined && $(this).attr('class') === undefined ){
+                                 content = $(this).text();
+                        }
+                    });
+                        
+                    $(this).html('<p>'+content.substring(0,max) + readmore + '</p>');
                 }
            });
 
