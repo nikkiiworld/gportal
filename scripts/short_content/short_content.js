@@ -2,8 +2,9 @@ function roviditettBejegyzesek (max = 250, readMoreText = "[..]", firstPost = fa
         
     if( window.location.search.indexOf('postid') ===  -1 ){
 
+        console.log($('.post-content').length);
         if($('.post-content').length > 0){
-
+           
            $('.post-content').each(function(i){
                if( firstPost === true && i === 0 ){
                    i++;
