@@ -1,6 +1,6 @@
 function latestDisqusComments (selector, forum, limit, apiKey) {
     
-    $('head').append('<srcipt src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment-with-locales.min.js">');
+    $('head').append('<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment-with-locales.min.js">');
     
     if(!selector || $(selector).length === 0){
         selector = $('.lastcomments');
