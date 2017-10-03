@@ -1,0 +1,29 @@
+.pageshare{ /*Social media ikonok*/
+    text-align: center !important;
+}
+/*facebook gomb*/
+.pageshare a:first-of-type img{
+    display: none;
+}.pageshare a{
+    padding: 0px;
+}
+.pageshare a:first-of-type::before{ /* FB ikon lecsérélése */
+    content: " \f09a "; /*facebook ikon fontawesome kódja*/
+    font-family: FontAwesome, serif;
+    font-size: 11px;
+    padding: 5px 10px;
+}
+/*twitter gomb*/
+.pageshare a:nth-of-type(2) img{
+    display: none;
+}
+.pageshare a:nth-of-type(2)::before{ /*Twitter ikon lecserélése*/
+    content: " \f099 "; /*twitter ikon fontawesome kódja*/
+    font-family: FontAwesome, serif;
+    font-size: 11px;
+    padding: 5px 10px;
+    margin-top: 5px !important;
+}
+.pageshare iframe{ /*Az fb megosztást eltüntetjük, mert az nem formázható*/
+    display: none;
+}
