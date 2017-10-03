@@ -12,7 +12,7 @@
                            i++;
                        }else{
                             var title = $(this).closest('h2');
-                            if(title.parent().is('a'){
+                            if(title.parent().is('a')){
                                readmore.attr('href',title.parent().attr('href'));
                             }else{
                                readmore.attr('href', '#');      
@@ -28,7 +28,7 @@
                             i++;
                         }else{
                             var title = $(this).closest('h2');
-                            if(title.parent().is('a'){
+                            if(title.parent().is('a')){
                                readmore.attr('href',title.parent().attr('href'));
                             }else{
                                readmore.attr('href', '#');      
