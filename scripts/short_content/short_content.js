@@ -1,4 +1,4 @@
-(function($) {
+//(function($) {
 
         var roviditettBejegyzesek = function (max = 250, readMoreText = "[..]", firstPost = false){
         
@@ -43,4 +43,4 @@
 
         }
         
-})(jQuery); 
+//})(jQuery); 
