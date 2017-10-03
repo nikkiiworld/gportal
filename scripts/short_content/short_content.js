@@ -15,7 +15,7 @@ function roviditettBejegyzesek (max = 250, readMoreText = "[..]", firstPost = fa
                     }else{
                        var readmore = '<span class="readmore">'+readMoreText+'</span>';
                     }
-                    $(this).html('<p>'+$('this').text().substring(0,max) + readmore + '</p>');
+                    $(this).html('<p>'+$(this).text().substring(0,max) + readmore + '</p>');
                }
 
            });
