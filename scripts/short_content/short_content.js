@@ -2,7 +2,6 @@ function roviditettBejegyzesek (max = 250, readMoreText = "[..]", firstPost = fa
         
     if( window.location.search.indexOf('postid') ===  -1 ){
 
-        var readmore = '<a class="readmore" href="#">'+readMoreText+'</a>';
         if($('.post-content').length > 0){
 
            $('.post-content').each(function(i){
@@ -11,9 +10,9 @@ function roviditettBejegyzesek (max = 250, readMoreText = "[..]", firstPost = fa
                }else{
                     var title = $(this).closest('h2');
                     if(title.parent().is('a')){
-                       readmore.attr('href',title.parent().attr('href'));
+                       var readmore = '<a class="readmore" href="'+title.parent().attr('href')+'">'+readMoreText+'</a>';
                     }else{
-                       readmore.attr('href', '#');      
+                       var readmore = '<span class="readmore">'+readMoreText+'</span>';
                     }
                     $(this).html('<p>'+$('.post-content').text().substring(0,max) + readmore + '</p>');
                }
@@ -26,10 +25,10 @@ function roviditettBejegyzesek (max = 250, readMoreText = "[..]", firstPost = fa
                     i++;
                 }else{
                     var title = $(this).closest('h2');
-                    if(title.parent().is('a')){
-                       readmore.attr('href',title.parent().attr('href'));
+                    if(title.parent().is('a')){  
+                       var readmore = '<a class="readmore" href="'+title.parent().attr('href')+'">'+readMoreText+'</a>';
                     }else{
-                       readmore.attr('href', '#');      
+                       var readmore = '<span class="readmore">'+readMoreText+'</span>';
                     }
                     $(this).html('<p>'+$('div:not([attr_all])').text().substring(0,max) + readmore + '</p>');
                 }
