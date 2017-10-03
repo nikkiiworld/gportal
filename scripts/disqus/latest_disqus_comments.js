@@ -29,7 +29,7 @@ function latestDisqusComments (selector, forum, limit, apiKey) {
                 result += template;
 
             }
-            selector.html(result);
+            $(selector).html(result);
         }
     });
 }
