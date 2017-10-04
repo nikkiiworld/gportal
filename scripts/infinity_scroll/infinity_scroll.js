@@ -42,6 +42,7 @@
                                 }
 
                                 if(localStorage.getItem('excerptsToBlogPosts') !== undefined){
+                                    addPostContentClass();
                                     shorterForInfinityScroll($posts);
                                 }
 
