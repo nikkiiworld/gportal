@@ -30,6 +30,7 @@
                         $.get($url, function(data, status){
 
                             if(status === "success" || status === 200){
+                                var event = new Event('infinityScrollEvent');
                                 var $responseBody = $($.parseHTML(data));
                                 var $posts =  $responseBody.find('div[id^="post"]');
 
