@@ -1,4 +1,6 @@
 function disqus (forum){
+
+    localStorage.setItem('disqusForumNeve', forum);
     
     if($("#commentContainer").length > 0){
         $( "#commentContainer" ).replaceWith( '<div id="disqus_thread"></div>' );
@@ -21,6 +23,16 @@ function disqus (forum){
         })();
     }
 
+    changeCommentLink();
+
+    var count = document.createElement('script');
+    count.setAttribute('id', 'dsq-count-scr');
+    count.setAttribute('src', '//'+forum+'.disqus.com/count.js');
+    count.setAttribute('async','');
+    document.body.appendChild(count);
+}
+
+function changeCommentLink(){
     $('.blogcommentcount > div > a').each(function(){
         var str = this.href;
         this.setAttribute('class','disqus-comment-count');
@@ -34,13 +46,7 @@ function disqus (forum){
         this.setAttribute('data-disqus-url',str.substring(0, str.indexOf("#disqus_thread")));
         this.href = str;
     });
-
-    var count = document.createElement('script');
-    count.setAttribute('id', 'dsq-count-scr');
-    count.setAttribute('src', '//'+forum+'.disqus.com/count.js');
-    count.setAttribute('async','');
-    document.body.appendChild(count);
-};
+}
 
 function getPageIdentifier( name, url ) {
     if (!url)
