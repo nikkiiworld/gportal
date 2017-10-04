@@ -1,4 +1,4 @@
-(function($){
+function infinityScroll(){
 
     var bloglistend = $('.bloglistend');
     if( bloglistend.length > 0){
@@ -15,14 +15,12 @@
 
                 var next = $('a.pager_next');
                 if( next.length > 0){
-                    var event = new Event('infinityScrollEvent');
-
                     var $url = $(next).attr('href');
 
                     var $div    = $('<div class="spinner"></div>');
-                        $div.append('<div class="bounce1"></div>');
-                        $div.append('<div class="bounce2"></div>');
-                        $div.append('<div class="bounce3"></div>');
+                    $div.append('<div class="bounce1"></div>');
+                    $div.append('<div class="bounce2"></div>');
+                    $div.append('<div class="bounce3"></div>');
 
                     $(bloglistend).html($div);
                     $(bloglistend).find('.spinner').show();
@@ -37,14 +35,36 @@
 
                                 $(bloglistend).remove();
 
-                                for(var $i=0; $i<$posts.length; $i++){
-                                    $('.blogmodul').append($posts[$i]).fadeIn('500');
+
+                                if(localStorage.getItem('excerptsToBlogPosts') !== undefined && typeof shorterForInfinityScroll === 'function'){
+
+                                    for(var $i=0; $i<$posts.length; $i++){
+                                        var current = $posts[$i];
+                                        $('.blogmodul').append(current).fadeIn('500');
+                                        shorterForInfinityScroll(current);
+                                    }
+
+
+                                }else{
+                                    for(var $i=0; $i<$posts.length; $i++){
+                                        $('.blogmodul').append($posts[$i]).fadeIn('500');
+                                    }
                                 }
 
-                                if(localStorage.getItem('excerptsToBlogPosts') !== undefined){
+
+                                if(localStorage.getItem('postContentWrapper') && typeof addPostContentClass === 'function' ){
                                     addPostContentClass();
-                                    shorterForInfinityScroll($posts);
                                 }
+
+
+                                if(localStorage.getItem('disqusForumNeve') && typeof changeCommentLink === 'function' ){
+                                    changeCommentLink();
+                                }
+
+                                if(localStorage.getItem('gpFontAwesomeIcons') && typeof changeIcons === 'function' ){
+                                    changeIcons();
+                                }
+
 
                                 if($responseBody.find('a.pager_next').length > 0){
                                     $('.blogmodul').append($($responseBody).find(bloglistend)).fadeIn('slow');
@@ -59,4 +79,8 @@
         }
     });
 
-})(jQuery);
+};
+
+$(document).ready(function(){
+    infinityScroll();
+});

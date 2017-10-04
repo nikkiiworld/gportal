@@ -44,9 +44,36 @@ function infinityScrollWithButton (buttonText) {
 
                     $(bloglistend).remove();
 
-                    for (var $i = 0; $i < $posts.length; $i++) {
-                        $('.blogmodul').append($posts[$i]).fadeIn('500');
+                    if(localStorage.getItem('excerptsToBlogPosts') !== undefined && typeof shorterForInfinityScroll === 'function'){
+
+                        for(var $i=0; $i<$posts.length; $i++){
+                            var current = $posts[$i];
+                            $('.blogmodul').append(current).fadeIn('500');
+                            shorterForInfinityScroll(current);
+                        }
+
+
+                    }else{
+                        for(var $i=0; $i<$posts.length; $i++){
+                            $('.blogmodul').append($posts[$i]).fadeIn('500');
+                        }
                     }
+
+
+                    if(localStorage.getItem('postContentWrapper') && typeof addPostContentClass === 'function' ){
+                        addPostContentClass();
+                    }
+
+
+                    if(localStorage.getItem('disqusForumNeve') && typeof changeCommentLink === 'function' ){
+                        changeCommentLink();
+                    }
+
+                    if(localStorage.getItem('gpFontAwesomeIcons') && typeof changeIcons === 'function' ){
+                        changeIcons();
+                    }
+
+
                     if ($responseBody.find('a.pager_next').length > 0) {
                         $('.blogmodul').append($($responseBody).find('.bloglistend')).fadeIn('slow');
                     }
