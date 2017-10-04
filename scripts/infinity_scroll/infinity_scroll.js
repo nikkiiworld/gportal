@@ -15,6 +15,7 @@
 
                 var next = $('a.pager_next');
                 if( next.length > 0){
+                    var event = new Event('infinityScrollEvent');
 
                     var $url = $(next).attr('href');
 
@@ -30,7 +31,7 @@
                         $.get($url, function(data, status){
 
                             if(status === "success" || status === 200){
-                                var event = new Event('infinityScrollEvent');
+
                                 var $responseBody = $($.parseHTML(data));
                                 var $posts =  $responseBody.find('div[id^="post"]');
 
@@ -39,6 +40,11 @@
                                 for(var $i=0; $i<$posts.length; $i++){
                                     $('.blogmodul').append($posts[$i]).fadeIn('500');
                                 }
+
+                                if(localStorage.getItem('excerptsToBlogPosts') !== undefined){
+                                    shorterForInfinityScroll($posts);
+                                }
+
                                 if($responseBody.find('a.pager_next').length > 0){
                                     $('.blogmodul').append($($responseBody).find(bloglistend)).fadeIn('slow');
                                 }
