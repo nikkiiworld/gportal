@@ -4,10 +4,11 @@ function roviditettBejegyzesek (max = 250, readMoreText = "[..]", firstPost = fa
 
         window.addEventListener('infinityScrollEvent', function(){
             //for infinity scroll
+            console.log("itt mi történik");
             if( $('.excerpt').length < $('div[id^="post_"]').length){
                 console.log("mi történik");
             }
-        }, false);
+        });
 
         if($('.post-content').length > 0){
 
