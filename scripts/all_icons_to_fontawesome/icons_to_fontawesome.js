@@ -1,6 +1,6 @@
 function changeIcons(){
 
-    localStorage.setItem('fontAwesomeIcons', true);
+    localStorage.setItem('gpFontAwesomeIcons', true);
 
     var title = $('img[src="image/note10.png"]').attr('title');
     $('img[src="image/note10.png"]').replaceWith( '<i class="fa fa-file-text-o" title="'+title+'" aria-hidden="true"></i>' );
