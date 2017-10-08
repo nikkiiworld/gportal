@@ -18,6 +18,7 @@
                 noneditable_noneditable_class: 'fa',
                 extended_valid_elements:'script[language|type|src|charset|title],span[*],i[*],style[*]',
                 verify_html: false,
+                valid_children : "+body[style]",
                 init_instance_callback: function (editor) {
 
                     if($('script[src*="ckeditor_3.6"]').length > 0){
