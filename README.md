@@ -90,3 +90,17 @@ $(document).ready(function(){
 <!-- DISQUS END -->
 ```
 
+## 9. Dátum és Szerző szétválasztása + osztályok
+Működik alul & felül is.
+Az osztályok: 
+.post-date{} // ebben lesz mindkettő / de a .txtmini/.blogpostdate is megmarad mellette
+.date{} // csak a dátum
+.author{} // csak a szerző
+CSS-ben ezután könnyen rakható be eléjük FontAwesome ikon, pl: 
+.date::before{content:'\fontawesomekód'; font-family: FontAwesome; padding: 0 5px;}
+```html
+<!-- SEPARATE POST DATE AND AUTHOR -->
+<script src="hhttps://rawgit.com/nikkiiworld/gportal/master/scripts/separate_blog_date/separate_blog_date.min.js"></script>
+<!-- SEPARATE POST DATE AND AUTHOR -->
+```
+
