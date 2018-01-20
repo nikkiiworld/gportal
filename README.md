@@ -101,7 +101,14 @@ CSS-ben ezután könnyen rakható be eléjük FontAwesome ikon, pl:
 .date::before{content:'\fontawesomekód'; font-family: FontAwesome; padding: 0 5px;}
 ```html
 <!-- SEPARATE POST DATE AND AUTHOR -->
-<script src="hhttps://rawgit.com/nikkiiworld/gportal/master/scripts/separate_blog_date/separate_blog_date.min.js"></script>
+<script src="https://rawgit.com/nikkiiworld/gportal/master/scripts/separate_blog_date/separate_blog_date.min.js"></script>
 <!-- SEPARATE POST DATE AND AUTHOR -->
+```
+
+## 10. Blogmodul osztály
+```html
+<!-- ADD BLOGMODUL CLASS -->
+<script src="https://rawgit.com/nikkiiworld/gportal/master/scripts/blogmodul-class/blogmodul-class.js"></script>
+<!-- ADD BLOGMODUL CLASS -->
 ```
 
