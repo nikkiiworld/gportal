@@ -109,6 +109,13 @@ CSS-ben ezután könnyen rakható be eléjük FontAwesome ikon, pl:
 ```html
 <!-- ADD BLOGMODUL CLASS -->
 <script src="https://rawgit.com/nikkiiworld/gportal/master/scripts/blogmodul-class/blogmodul-class.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    blogmodulClass();
+});
+}
+</script>
+}
 <!-- ADD BLOGMODUL CLASS -->
 ```
 
