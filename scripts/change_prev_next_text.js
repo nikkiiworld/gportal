@@ -11,10 +11,11 @@ function changePrevNext(){
 
         if( /^Következő (\d+) cikk$/.test(txt) === true ){
             txt = txt.replace(/Következő/gi, "Előző");
+            $(that).text(txt);
         }else if( /^Előző (\d+) cikk$/.test(txt) === true ){
             txt = txt.replace(/Előző/gi, "Következő");
+            $(that).text(txt);
         }
 
-        $(that).text(txt);
     });
 }
