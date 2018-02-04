@@ -113,9 +113,19 @@ CSS-ben ezután könnyen rakható be eléjük FontAwesome ikon, pl:
 $(document).ready(function(){
     blogmodulClass();
 });
-}
 </script>
-}
 <!-- ADD BLOGMODUL CLASS -->
+```
+
+## 11. Előző/Következő felirat felcserélése Hírek/cikkek modulban
+```html
+<!-- CHANGE PREV/NEXT TEXT -->
+<script src="https://rawgit.com/nikkiiworld/gportal/master/scripts/change_prev_next_text.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    changePrevNext();
+});
+</script>
+<!-- CHANGE PREV/NEXT TEXT -->
 ```
 
