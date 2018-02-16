@@ -130,6 +130,7 @@ $(document).ready(function(){
 ```
 
 ## 12. Kapcsolódó bejegyzések megjelenítése bejegyzések alatt
+![Kapcoslódó bejegyzések megjelenítése](https://raw.githubusercontent.com/nikkiiworld/gportal/master/scripts/related_posts/relatedposts-gp.png)
 ```html
 <!-- RELATED POSTS -->
 <script src="https://rawgit.com/nikkiiworld/gportal/master/scripts/related_posts/relatedposts.min.js"></script>
