@@ -129,3 +129,10 @@ $(document).ready(function(){
 <!-- CHANGE PREV/NEXT TEXT -->
 ```
 
+## 12. Kapcsolódó bejegyzések megjelenítése bejegyzések alatt
+```html
+<!-- RELATED POSTS -->
+<script src="https://rawgit.com/nikkiiworld/gportal/master/scripts/related_posts/relatedposts.min.js"></script>
+<!-- RELATED POSTS -->
+```
+
