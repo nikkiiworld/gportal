@@ -1,3 +1,9 @@
+# Egyéb
+
+Coppermine Album Downloader - Chrome bővítmény
+https://chrome.google.com/webstore/detail/coppermine-album-download/magolbmjckjmhpmohfpomegcpmgfkpcm
+
+
 # G-Portál kódok
 Ezt a repót azért hoztam létre, hogy a G-Portálhoz készített kódjaimnak egy jobb rendszert teremtsek vele. A kódok nagyrészét át is írtam, az esetlegesen felmerülő hibákat kijavítottam bennük, illetve legfőképpen külön szedtem őket, így sokkal kényelmesebben, és egyszerűbben használhatók lettek. Ennek a fájlnak a tartalma folyamatosan bővül(het).
 
